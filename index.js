@@ -18,7 +18,7 @@ const CFonts = require('cfonts');
 let package = require('./package.json');
 ///////////Openai API/////////////
 const { Configuration, OpenAIApi } = require("openai");
-const keynya = "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" //ganti apikeynya disini
+const keynya = "isi key lu cok" //ganti apikeynya disini
 const configuration = new Configuration({
   apiKey: keynya,
 });
@@ -154,7 +154,7 @@ const start = async () => {
             } 
             if (!isGroupMsg) {
                 if (ishalo) {
-                    await reply(`Hai, ada yang bisa bot bantu?`);
+                    await reply(`Hai, ada yang bisa aku bantu?`);
                     console.log('[MSG]', color(moment(t * 1000).format('DD/MM/YY HH:mm:ss'), '#A1FFCE'), msgs(m.text), `~>`, bgColor(color(" HOLA ", '#FAFFD1'), '#095710'), `from`, color(pushname, '#38ef7d'))
                 } else if (isCmd) {
                     console.log(color('[CMD]'), color(moment(t * 1000).format('DD/MM/YY HH:mm:ss'), '#A1FFCE'), color(`${cmd} [${args.length}]`), color(`${msgs(body)}`, 'cyan'), '~> from', color(pushname, 'green'))
@@ -185,7 +185,7 @@ const start = async () => {
         if (call.content[0].tag == 'offer') {
             const callerJid = call.content[0].attrs['call-creator']
             const {  platform, notify, t } = call.attrs
-            const caption = `Maaf BOT tidak dapat menerima panggilan :)`
+            const caption = `Maaf aku tidak dapat menerima panggilan :)`
             await client.sendMessage(callerJid, { text: caption })
         }
     })
